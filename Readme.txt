@@ -15,3 +15,10 @@
 我的blog: www.sukunahust.com(Suwa Shrine[诹访大社])
 
 运行方式
+
+```
+cd directory
+make run
+```
+
+或者将这个文件夹压缩成压缩包上传到overleaf
