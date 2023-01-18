@@ -119,11 +119,8 @@
 
 \pagenumbering{Roman}
 
-\tableofcontents[level=2]
-\clearpage
-
 \pagenumbering{arabic}
-\section{实验一}
+\section{课题研究背景}
 \subsection{串行环境下的排序算法}
 \subsubsection{实验目的与要求}
 
@@ -377,7 +374,7 @@ MPI是一个跨语言（编程语言如C, Fortran等）的通讯协议，用于�
 \end{figure}
 
 \newpage
-\section{实验二}
+\section{国内外研究现状}
 \subsection{串行环境下的杨辉三角输出}
 \subsubsection{实验目的与要求}
 串行环境下编写打印杨辉三角形的C语言小程序，并按要求输出对应的杨辉三角形。本关需要掌握杨辉三角的基本格式。
@@ -475,39 +472,6 @@ MPI是一个跨语言（编程语言如C, Fortran等）的通讯协议，用于�
 
 接下来在上述串行程序的基础上使用MPI进行并行编程。大致的思路就是将整行一维数组平均分配给每个处理器，不同的处理器处理不同的分区，处理器之间相互传递消息，以保证数据计算的正确性。如算法\ref{alg:F6}所示。
 
-\begin{algorithm}[htb]
-\caption{MPI环境下的杨辉三角输出}
-\label{alg:F6}
-\hspace*{0.02in} {\bf Input:}
-需要输出的杨辉三角的层数n\\
-\hspace*{0.02in} {\bf Output:} 
-计算并打印层数为n的杨辉三角
-  \begin{algorithmic}[1]
-    \State
-        main：MPI初始化将当前处理器id以及处理器个数保存至idproc和nproc变量中。仅0号处理器读取用户的输入n，并利用MPI\_Bcast函数将该变量的值广播给所有处理器。调用computeloop函数，n,nproc以及idproc作为参数。
-    \State
-        computeloop：根据n和nproc的大小对每个处理器需要处理的任务（数据量）进行划分。如果是0号处理器，则开辟一个大数组的空间用于整合所有分任务的计算结果；对于其他的处理器，根据划分的任务数据量大小开辟空间。对数组进行初始化操作，即将数组中间某个元素赋值为1，其余全部赋值为0。调用iterationloop函数，将任务数组、数组的大小、输出层数n、idproc以及nproc作为参数。
-    \State
-        iterationloop：首先指定leftIDProc和RightIDProc表示用于通信的处理器ID编号。然后对任务数组进行迭代循环，循环的次数即为输出的层数。
-    \State
-        如果循环次数为奇数则调用addleft函数，然后从rightIDProc接收任务数组最右边的元素，将本任务数组左边的元素发送给leftIDProc，使用MPI\_Wait函数确保数据进行了传输。
-    \State
-        对于循环次数为偶数的情况则调用addright，然后从leftIDProc接收任务数组最左边的元素，发送任务数组最右边的元素给rightIDProc，使用MPI\_Wait函数确保数据进行了传输。
-    \State
-        由于需要打印每一次迭代的结果数据，需要在iterationloop中利用MPI\_Gather函数，将所有处理器的任务数组数据整合到0号处理器的大数组中。
-  \end{algorithmic}
-\end{algorithm}
-
-下面对算法\ref{alg:F6}中提及的一些变量和函数及其作用进行说明：
-
-(1) \texttt{idproc, nproc: nproc描述当前有多少处理器正在运行此作业，idproc标识处理器的名称(0~nproc-1)。这两个变量由main提供给computeloop函数，由computeloop函数提供给iterationloop函数。}
-
-(2) \texttt{leftIDProc \& rightIDProc: 该变量描述了所指定的左右相邻的处理器ID，用于迭代循环内的通信，在迭代循环进行之前进行计算。}
-
-(3) \texttt{MPI\_Irecv, MPI\_Send, and MPI\_Wait: 这些是基本的MPI接口，将一个处理器的结果数据与另一个处理器的初始数据连接起来。leftIDProc和RightIDProc标识消息发送和接收的处理器ID。}
-
-(4) \texttt{iterationloop函数被赋予一个数组，该数组比该处理器实际负责的空间要大一个元素，额外的元素用作“保护”元素。保护元素位于分区的右边缘。addleft之后，将该处理器最左边的元素通过MPI\_Send提供给左边的处理器，该处理器最右边的元素通过MPI\_Recv从右边的处理器获得。addright之后，使用MPI\_Send将此处理器最右侧的元素发送给右侧相邻的处理器，此处理器最左侧的元素通过使用MPI\_Recv接收来自左侧相邻处理器的消息获得。}
-
 \subsubsection{复杂度分析}
 本实验将杨辉三角的计算从二维数据压缩到了一维数组，因此空间复杂度为$O(n)$。
 
@@ -523,7 +487,7 @@ MPI环境下的杨辉三角的计算过程如图\ref{fig:p5}所示。图中每�
 \end{figure}
 
 \newpage
-\section{总结}
+\section{课题研究的意义、内容和目标}
 通过并行编程原理与实践课程，我学习到了许多之前完全没有接触到的新鲜事物，对于并行处理的底层实现机制也有了自己的理解，通过实践课程我也掌握了pthread、OpenMP以及MPI环境下并行编程的具体实现方法。
 
 MPI实质上是多进程，并且不支持多线程；初始化时在每个处理机上创建一个进程，执行期间进程数目不能动态改变；MPI其实就是一种在各个进程之间进行通讯的标准。
@@ -544,14 +508,22 @@ MPI实质上是多进程，并且不支持多线程；初始化时在每个处�
 
 在这里教你怎么引用:\cite{ref1}
 
+
+\section{技术关键与技术路线}
+6
+\section{风险分析}
+6
+\section{课题研究进度安排}
+6
+
 \begin{thebibliography}{99}  
 
-\bibitem{ref1}Durgam S, Earley W, Lipschitz A, et al. An 8-week randomized, double-blind, placebo-controlled evaluation of the safety and efficacy of cariprazine in patients with bipolar I depression[J]. American Journal of Psychiatry, 2016, 173(3): 271-281.
+  \bibitem{ref1}Durgam S, Earley W, Lipschitz A, et al. An 8-week randomized, double-blind, placebo-controlled evaluation of the safety and efficacy of cariprazine in patients with bipolar I depression[J]. American Journal of Psychiatry, 2016, 173(3): 271-281.
+  
+  \end{thebibliography}
+\clearpage
 
-\end{thebibliography}
-
-
-\section*{\zihao{4} 华中科技大学本科生毕业设计（论文）开题报告评审表}
+\centerline{\zihao{4} \heiti 华中科技大学本科生毕业设计（论文）开题报告评审表}
 \thispagestyle{empty}
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -582,7 +554,7 @@ MPI实质上是多进程，并且不支持多线程；初始化时在每个处�
 \multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
 \multicolumn{6}{|c|}{\multirow{-15}{*}{{\color[HTML]{FF0000} }}}                                                                                                                        \\ \hline
 \multicolumn{6}{|l|}{}                                                                                                                                                                  \\
-\multicolumn{6}{|l|}{\multirow{-2}{*}{指导教师（签名）：}}                                                                                                                                       \\ 
+\multicolumn{6}{|l|}{\multirow{-2}{*}{\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad 指导教师（签名）：}}                                                                                                                                       \\ 
 \multicolumn{6}{|r|}{年\qquad 月\qquad 日}                                                                                                                                                       \\ \hline
 \multicolumn{6}{|c|}{\textbf{教研室（系、所）或开题报告答辩小组审核意见}}                                                                                                                                    \\ \hline
 \multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\

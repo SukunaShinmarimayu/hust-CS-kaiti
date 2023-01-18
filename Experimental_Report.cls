@@ -185,8 +185,8 @@
 
 %设置各个标题样式
 %不需要使用part和chapter层级
-\ctexset{section={format={\centering \heiti \bfseries \zihao{-2}}}} %节
-\newcommand{\sectionbreak}{\clearpage} %小节从新的一页开始
+\ctexset{section={format={\heiti \bfseries \zihao{-2}}}} %节
+%\newcommand{\sectionbreak}{\clearpage} %小节从新的一页开始
 \ctexset{subsection={format={\raggedright \heiti \bfseries \zihao{4}}}} %小节
 \ctexset{subsubsection={format={\raggedright \heiti \bfseries \zihao{-4}}}} %小小节
 \renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
@@ -792,7 +792,7 @@
 %设置参考文献
 \RequirePackage{natbib}
 \setcitestyle{numbers,square,comma}
-\ctexset{bibname={参考文献}}
+\ctexset{bibname={七\quad 主要参考文献}}
 
 %正常引用和上标引用
 \let \normalcite \cite

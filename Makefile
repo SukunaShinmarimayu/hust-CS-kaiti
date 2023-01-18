@@ -13,7 +13,7 @@ $(FILE).pdf: $(FILE).tex $(FILE).aux $(FILE).toc $(FILE).bbl
 	$(TEX) $(FILE)
 	$(TEX) $(FILE)
 
-$(FILE).bbl: $(FILE).bib $(FILE).aux HustGraduPaper.cls gbt7714-2005.bst gbt7714-2015.bst
+$(FILE).bbl: $(FILE).bib $(FILE).aux HustGraduPaper.cls gbt7714-Hust.bst
 	$(BIB) $(FILE)
 
 $(FILE).aux: $(FILE).tex HustGraduPaper.cls HustBlack.eps HustGreen.eps

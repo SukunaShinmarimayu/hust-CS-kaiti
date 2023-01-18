@@ -185,7 +185,7 @@
 
 %设置各个标题样式
 %不需要使用part和chapter层级
-\ctexset{section={format={\centering \heiti \bfseries \zihao{-2}}}} %节
+\ctexset{section={format={\heiti \bfseries \zihao{-2}}}} %节
 \newcommand{\sectionbreak}{\clearpage} %小节从新的一页开始
 \ctexset{subsection={format={\raggedright \heiti \bfseries \zihao{4}}}} %小节
 \ctexset{subsubsection={format={\raggedright \heiti \bfseries \zihao{-4}}}} %小小节

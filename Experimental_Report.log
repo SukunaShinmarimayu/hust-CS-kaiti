@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.4.16)  18 JAN 2023 21:50
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.4.16)  18 JAN 2023 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1729,22 +1729,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-(./Experimental_Report.toc)
-\tf@toc=\write7
-\openout7 = `Experimental_Report.toc'.
-
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 132.
  [1
-
 
 ]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 135.
- [1
-
-
-
-] [2] [3]
-Overfull \hbox (22.5275pt too wide) in paragraph at lines 240--241
+[2] [3]
+Overfull \hbox (22.5275pt too wide) in paragraph at lines 237--238
 []\TU/FandolSong-Regular(0)/m/n/12.045 对 于 空 间 复 杂 度\TU/TimesNewRoman(0)/m/n/12
 .045 , \TU/FandolSong-Regular(0)/m/n/12.045 一 个 一 维 数 组 保 存 数 组 元 素，|  两 个 一 维 
 数 组 $\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 element number <
@@ -1781,7 +1772,7 @@ Slant={0.167}].
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 [5]
-Underfull \hbox (badness 2512) in paragraph at lines 295--297
+Underfull \hbox (badness 2512) in paragraph at lines 292--294
 []\TU/FandolSong-Regular(0)/m/n/12.045 在 快 速 排 序 程 序 的 递 归 调 用 语 句 之 前 指 定 \TU/
 TimesNewRoman(0)/m/n/12.045 #pragma omp task firstpri-
  []
@@ -1815,74 +1806,50 @@ Package fontspec Info: Font family 'FandolSong-Regular(1)' created for font
 [6] [7] [8]
 File: MPI_quick_sort.png Graphic file (type bmp)
 <MPI_quick_sort.png>
- [9] [10]
+ [9]
 File: 杨辉三角.png Graphic file (type bmp)
 <杨辉三角.png>
- [11
+ [10] [11] [12]
 
-] [12]
-
-Package hyperref Warning: Suppressing link with empty target on input line 457.
+Package hyperref Warning: Suppressing link with empty target on input line 454.
 
 
-[13]
-Overfull \hbox (14.97246pt too wide) in paragraph at lines 461--462
+
+Overfull \hbox (14.97246pt too wide) in paragraph at lines 458--459
 []\TU/TimesNewRoman(0)/m/n/12.045 (2) \TU/lmtt/m/n/12.045 iterationloop: \TU/Fa
 ndolFang-Regular(0)/m/n/12.045 该 函 数 在 指 定 次 数 的 迭 代 中 执 行 循 环，|  交 替 调 用 \TU/l
 mtt/m/n/12.045 addleft
  []
 
+[13]
 File: 杨辉三角01.png Graphic file (type bmp)
 <杨辉三角01.png>
-
-Underfull \hbox (badness 4013) in paragraph at lines 496--498
-[]\TU/FandolSong-Regular(0)/m/n/12.045 由 于 需 要 打 印 每 一 次 迭 代 的 结 果 数 据，|  需 要 在
- \TU/TimesNewRoman(0)/m/n/12.045 iterationloop \TU/FandolSong-Regular(0)/m/n/12
-.045 中 利 用
- []
-
-
-Overfull \hbox (3.65015pt too wide) in paragraph at lines 503--504
-[]\TU/TimesNewRoman(0)/m/n/12.045 (1) \TU/lmtt/m/n/12.045 idproc, nproc: nproc 
-\TU/FandolFang-Regular(0)/m/n/12.045 描 述 当 前 有 多 少 处 理 器 正 在 运 行 此 作 业，| \TU/lm
-tt/m/n/12.045 idproc
- []
-
-[14]
 File: 杨辉三角02.png Graphic file (type bmp)
 <杨辉三角02.png>
- [15] [16] [17] [18
-
-] [19
-
-]
-Overfull \hbox (9.96703pt too wide) in paragraph at lines 563--599
+ [14] [15] [16]
+Overfull \hbox (9.96703pt too wide) in paragraph at lines 535--571
 [][] 
  []
 
-[20
+[17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 573.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 573.
  (./Experimental_Report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 601.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 573.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 573.
 Package rerunfilecheck Info: File `Experimental_Report.out' has not changed.
-(rerunfilecheck)             Checksum: B238F3CD32F3907A2BFFE1E8CD8ED52F;1342.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 601.
+(rerunfilecheck)             Checksum: 8711B84A398F54E92F257DCF476BAD2E;4978.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 573.
  ) 
 Here is how much of TeX's memory you used:
- 47157 strings out of 479418
- 1123082 string characters out of 5884585
- 1528693 words of memory out of 5000000
- 63858 multiletter control sequences out of 15000+600000
+ 47170 strings out of 479418
+ 1123979 string characters out of 5884585
+ 1530554 words of memory out of 5000000
+ 63874 multiletter control sequences out of 15000+600000
  548068 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,15n,127p,942b,725s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Experimental_Report.pdf (22 pages).
+Output written on Experimental_Report.pdf (18 pages).
