@@ -24,6 +24,7 @@
 \usepackage{bm}
 \usepackage{longtable}
 \usepackage{tikz}
+\usepackage{pdfpages}
 \usepackage{tikzscale}
 \usepackage{pgfplots}
 %\usepackage{enumerate}
@@ -522,30 +523,30 @@ MPI实质上是多进程，并且不支持多线程；初始化时在每个处�
   
   \end{thebibliography}
 \clearpage
-
-\centerline{\zihao{4} \heiti 华中科技大学本科生毕业设计（论文）开题报告评审表}
-\thispagestyle{empty}
+\begin{comment}
+%\centerline{\zihao{4} \heiti 华中科技大学本科生毕业设计（论文）开题报告评审表}
+%\thispagestyle{empty}
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage[table,xcdraw]{xcolor}
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+%
+%\begin{table}[htbp]
 
-\begin{table}[htbp]
+%\resizebox{150mm}{93mm}{
+%\setlength{\tabcolsep}{10mm}{
 
-\resizebox{150mm}{93mm}{
-\setlength{\tabcolsep}{10mm}{
+%\begin{tabular}{|cccccc|}
+%\hline
+%\multicolumn{1}{|c|}{\textbf{姓名}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{1}{c|}{\textbf{学号}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{1}{c|}{\textbf{指导教师}} & \textbf{} \\ \hline
+%\multicolumn{2}{|c|}{\textbf{院（系）专业}}                              & \multicolumn{4}{c|}{\textbf{}}                                                                                     \\ \hline
+%\multicolumn{6}{|c|}{\textbf{指导教师评语}}       \\                                                                            \multicolumn{6}{|l|}{{1.学生前期表现情况。}}    \\
 
-\begin{tabular}{|cccccc|}
-\hline
-\multicolumn{1}{|c|}{\textbf{姓名}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{1}{c|}{\textbf{学号}} & \multicolumn{1}{c|}{\textbf{}} & \multicolumn{1}{c|}{\textbf{指导教师}} & \textbf{} \\ \hline
-\multicolumn{2}{|c|}{\textbf{院（系）专业}}                              & \multicolumn{4}{c|}{\textbf{}}                                                                                     \\ \hline
-\multicolumn{6}{|c|}{\textbf{指导教师评语}}       \\                                                                            \multicolumn{6}{|l|}{{1.学生前期表现情况。}}    \\
-
-\multicolumn{6}{|l|}{{2.是否具备开始设计（论文）条件？是否同意开始设计（论文）？ }}   \\
-\multicolumn{6}{|l|}{{3.不足与建议。}}  \\
-\hline
-\multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
-\multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
+%\multicolumn{6}{|l|}{{2.是否具备开始设计（论文）条件？是否同意开始设计（论文）？ }}   \\
+%\multicolumn{6}{|l|}{{3.不足与建议。}}  \\
+%\hline
+%\multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
+%\multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
 \multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
 \multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
 \multicolumn{6}{|c|}{{\color[HTML]{FF0000} }}                                                                                                                                           \\
@@ -570,4 +571,6 @@ MPI实质上是多进程，并且不支持多线程；初始化时在每个处�
 }
 
 \end{table}
+\end{comment}
+\includepdf[pages=-]{认定表.pdf}
 \end{document}
