@@ -136,7 +136,7 @@
 
 %设置页眉样式
 \newcommand{\headstyle}{
-	\fancyhead[C]{\textcolor[RGB]{123,123,123}{ \zihao{4}  \bfseries 华中科技大学本科生毕业设计（论文）开题报告}}
+	\fancyhead[C]{\textcolor[RGB]{123,123,123}{ \zihao{4}  \bfseries \kaishu 华中科技大学本科生毕业设计（论文）开题报告}}
   \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
 	  \vspace*{2mm}
 	  {\color{headblue}\hrule\@height 0.5pt\@width\headwidth\vskip1pt}

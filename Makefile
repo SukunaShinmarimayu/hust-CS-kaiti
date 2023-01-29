@@ -21,5 +21,10 @@ $(FILE).aux: $(FILE).tex HustGraduPaper.cls HustBlack.eps HustGreen.eps
 
 $(FILE).toc: $(FILE).aux
 
+push:
+	git add *
+	git commit -m "fix some bug"
+	git push origin main
+
 clean:
 	$(RM) $(FILE).pdf $(FILE).toc $(FILE).log $(FILE).aux $(FILE).lof $(FILE).lot $(FILE).bbl $(FILE).blg
