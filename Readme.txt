@@ -12,8 +12,6 @@
 
 4、修改了若干bug
 
-我的blog: www.sukunahust.com(Suwa Shrine[诹访大社])
-
 运行方式
 
 ```
